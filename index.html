@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EcoShield | Protect Plants. Save Water.</title>
+
+<style>
+
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+:root{
+    --green:#39ff88;
+    --lime:#b8ff4d;
+    --cyan:#48e8ff;
+    --dark:#03110a;
+    --dark2:#071d11;
+    --dark3:#0b2b18;
+    --white:#f3fff7;
+    --text:#a8c8b4;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:
+        radial-gradient(circle at 15% 15%,rgba(57,255,136,.18),transparent 25%),
+        radial-gradient(circle at 85% 60%,rgba(72,232,255,.10),transparent 25%),
+        var(--dark);
+    color:var(--white);
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font-family:inherit;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:999;
+
+    background:rgba(3,17,10,.65);
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(57,255,136,.15);
+}
+
+.navbar{
+    max-width:1250px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 25px;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:900;
+}
+
+.logo span{
+    color:var(--green);
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    color:#9bb8a5;
+    font-size:14px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--green);
+}
+
+.menu{
+    display:none;
+    border:none;
+    background:none;
+    color:white;
+    font-size:26px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+
+    padding:130px 25px 70px;
+
+    position:relative;
+    overflow:hidden;
+}
+
+.hero:before{
+    content:"";
+
+    position:absolute;
+
+    width:550px;
+    height:550px;
+
+    border-radius:50%;
+
+    background:var(--green);
+
+    filter:blur(180px);
+
+    opacity:.08;
+
+    top:-200px;
+    right:-150px;
+}
+
+.hero-container{
+    max-width:1250px;
+    width:100%;
+
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+
+    align-items:center;
+
+    gap:70px;
+}
+
+.badge{
+    display:inline-block;
+
+    padding:9px 16px;
+
+    border-radius:30px;
+
+    background:rgba(57,255,136,.08);
+
+    border:1px solid rgba(57,255,136,.4);
+
+    color:var(--green);
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:clamp(60px,8vw,115px);
+
+    line-height:.87;
+
+    letter-spacing:-7px;
+
+    max-width:800px;
+}
+
+.hero h1 span{
+    background:
+        linear-gradient(
+            90deg,
+            var(--green),
+            var(--lime),
+            var(--cyan)
+        );
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+}
+
+.hero p{
+    max-width:650px;
+
+    margin:30px 0;
+
+    color:var(--text);
+
+    font-size:18px;
+
+    line-height:1.7;
+}
+
+.buttons{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:15px 23px;
+
+    border-radius:14px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+    display:inline-block;
+}
+
+.primary{
+    color:#021208;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--green),
+            var(--lime)
+        );
+
+    box-shadow:
+        0 0 30px rgba(57,255,136,.25);
+}
+
+.secondary{
+    border:1px solid #28573b;
+
+    background:#0a2114;
+}
+
+.btn:hover{
+    transform:translateY(-5px) scale(1.02);
+}
+
+/* =========================
+   ECO DEVICE VISUAL
+========================= */
+
+.visual{
+    height:520px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    position:relative;
+}
+
+.orbit{
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(57,255,136,.15);
+
+    animation:spin 15s linear infinite;
+}
+
+.orbit:before{
+    content:"☀";
+
+    position:absolute;
+
+    top:-20px;
+    left:50%;
+
+    font-size:30px;
+
+    filter:drop-shadow(
+        0 0 15px #39ff88
+    );
+}
+
+@keyframes spin{
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+.eco-device{
+    width:330px;
+    height:410px;
+
+    border-radius:40px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #154d2c,
+            #06150c 70%
+        );
+
+    border:1px solid #4aa96b;
+
+    box-shadow:
+        0 0 50px rgba(57,255,136,.15),
+        0 35px 80px rgba(0,0,0,.6);
+
+    transform:rotate(4deg);
+
+    animation:float 5s ease-in-out infinite;
+
+    position:relative;
+
+    z-index:2;
+}
+
+@keyframes float{
+    50%{
+        transform:
+            translateY(-18px)
+            rotate(-2deg);
+    }
+}
+
+.device-glow{
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    background:var(--green);
+
+    filter:blur(90px);
+
+    opacity:.15;
+
+    top:-80px;
+    right:-60px;
+}
+
+.device-screen{
+    margin:25px;
+
+    height:360px;
+
+    border-radius:28px;
+
+    background:#031008;
+
+    border:1px solid #1c5531;
+
+    padding:25px;
+}
+
+.device-top{
+    display:flex;
+
+    justify-content:space-between;
+
+    font-size:11px;
+
+    color:#7da58b;
+}
+
+.live{
+    color:var(--green);
+}
+
+.plant{
+    text-align:center;
+
+    font-size:100px;
+
+    margin:35px 0;
+
+    filter:
+        drop-shadow(
+            0 0 20px rgba(57,255,136,.4)
+        );
+}
+
+.sensor{
+    padding:15px;
+
+    border-radius:15px;
+
+    background:#0a2113;
+
+    border:1px solid #19472a;
+
+    margin-bottom:12px;
+}
+
+.sensor-title{
+    color:#8aa993;
+
+    font-size:12px;
+}
+
+.sensor-value{
+    color:var(--green);
+
+    font-size:22px;
+
+    font-weight:bold;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+    padding:120px 25px;
+}
+
+.container{
+    max-width:1150px;
+
+    margin:auto;
+}
+
+.section-title{
+    max-width:750px;
+
+    margin-bottom:55px;
+}
+
+.eyebrow{
+    color:var(--green);
+
+    font-size:12px;
+
+    letter-spacing:3px;
+
+    font-weight:bold;
+}
+
+h2{
+    font-size:clamp(42px,6vw,75px);
+
+    line-height:.95;
+
+    letter-spacing:-4px;
+
+    margin:14px 0 20px;
+}
+
+.section-title p{
+    color:var(--text);
+
+    line-height:1.7;
+
+    font-size:17px;
+}
+
+/* =========================
+   FEATURE CARDS
+========================= */
+
+.features{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:18px;
+}
+
+.feature{
+    padding:30px;
+
+    min-height:260px;
+
+    border-radius:25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(16,58,32,.9),
+            rgba(7,28,16,.9)
+        );
+
+    border:1px solid #214d32;
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.4s;
+}
+
+.feature:after{
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+    height:120px;
+
+    border-radius:50%;
+
+    background:var(--green);
+
+    filter:blur(70px);
+
+    opacity:.06;
+
+    right:-50px;
+    bottom:-50px;
+}
+
+.feature:hover{
+    transform:
+        translateY(-12px)
+        rotateX(3deg);
+
+    border-color:#48b96f;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.35);
+}
+
+.feature-icon{
+    font-size:42px;
+
+    margin-bottom:25px;
+}
+
+.feature h3{
+    font-size:20px;
+
+    margin-bottom:12px;
+}
+
+.feature p{
+    color:var(--text);
+
+    line-height:1.7;
+
+    font-size:14px;
+}
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.how{
+    background:
+        linear-gradient(
+            180deg,
+            transparent,
+            rgba(13,55,29,.35),
+            transparent
+        );
+}
+
+.steps{
+    display:grid;
+
+    grid-template-columns:
+        repeat(5,1fr);
+
+    gap:10px;
+}
+
+.step{
+    padding:25px;
+
+    background:#081e11;
+
+    border:1px solid #214c32;
+
+    border-radius:20px;
+
+    transition:.3s;
+}
+
+.step:hover{
+    background:#0d2b18;
+
+    transform:translateY(-7px);
+}
+
+.step-number{
+    color:var(--green);
+
+    font-size:11px;
+
+    font-weight:bold;
+
+    margin-bottom:20px;
+}
+
+.step-icon{
+    font-size:36px;
+
+    margin-bottom:12px;
+}
+
+.step p{
+    color:var(--text);
+
+    font-size:14px;
+
+    margin-top:8px;
+
+    line-height:1.6;
+}
+
+/* =========================
+   BIG STATEMENT
+========================= */
+
+.impact{
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:25px;
+}
+
+.impact-card{
+    min-height:360px;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    background:
+        linear-gradient(
+            145deg,
+            #103b21,
+            #06150c
+        );
+
+    border:1px solid #28603c;
+}
+
+.impact-card:first-child{
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(57,255,136,.3),
+            transparent 30%
+        ),
+        #0a2615;
+}
+
+.impact-card h3{
+    font-size:35px;
+
+    margin-bottom:12px;
+}
+
+.impact-card p{
+    color:var(--text);
+
+    line-height:1.7;
+}
+
+.big-icon{
+    position:absolute;
+
+    right:35px;
+
+    top:30px;
+
+    font-size:100px;
+
+    opacity:.25;
+}
+
+/* =========================
+   VISION
+========================= */
+
+.vision{
+    text-align:center;
+}
+
+.vision-box{
+    max-width:1000px;
+
+    margin:auto;
+
+    padding:80px 40px;
+
+    border-radius:35px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(57,255,136,.15),
+            transparent 60%
+        ),
+        #071b0f;
+
+    border:1px solid #327348;
+
+    box-shadow:
+        0 0 80px rgba(57,255,136,.08);
+}
+
+.vision-box h2{
+    margin-bottom:25px;
+}
+
+.vision-box p{
+    color:var(--text);
+
+    max-width:750px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    line-height:1.8;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:40px 25px;
+
+    border-top:1px solid #173b27;
+
+    color:#789685;
+}
+
+.footer{
+    max-width:1150px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:20px;
+}
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+.reveal{
+    opacity:0;
+
+    transform:translateY(35px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.reveal.show{
+    opacity:1;
+
+    transform:none;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+
+        position:absolute;
+
+        top:70px;
+        left:0;
+        right:0;
+
+        padding:25px;
+
+        background:#04150b;
+
+        flex-direction:column;
+    }
+
+    .nav-links.open{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero-container{
+        grid-template-columns:1fr;
+    }
+
+    .features{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .steps{
+        grid-template-columns:1fr;
+    }
+
+    .impact{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:550px){
+
+    .hero h1{
+        letter-spacing:-4px;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .eco-device{
+        width:290px;
+    }
+
+    .orbit{
+        width:350px;
+        height:350px;
+    }
+
+    .footer{
+        flex-direction:column;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header>
+
+<div class="navbar">
+
+<a href="#home" class="logo">
+🌱 Eco<span>Shield</span>
+</a>
+
+<button class="menu" id="menu">☰</button>
+
+<nav class="nav-links" id="nav">
+
+<a href="#home">Home</a>
+<a href="#features">Features</a>
+<a href="#how">How It Works</a>
+<a href="#impact">Impact</a>
+<a href="#vision">Vision</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-container">
+
+
+<div class="reveal">
+
+<div class="badge">
+SMART • ECO-FRIENDLY • PLANT CARE
+</div>
+
+<h1>
+Protect Plants.
+<br>
+<span>Save Water.</span>
+</h1>
+
+<p>
+EcoShield is a smart, eco-friendly plant-care concept
+that combines soil-moisture monitoring, rainwater reuse,
+solar energy and controlled drip irrigation.
+</p>
+
+<div class="buttons">
+
+<a href="#features" class="btn primary">
+Explore EcoShield ↓
+</a>
+
+<a href="#how" class="btn secondary">
+Discover How It Works →
+</a>
+
+</div>
+
+</div>
+
+
+
+<div class="visual reveal">
+
+<div class="orbit"></div>
+
+<div class="eco-device">
+
+<div class="device-glow"></div>
+
+<div class="device-screen">
+
+<div class="device-top">
+
+<span>ECOSHIELD SYSTEM</span>
+
+<span class="live">
+● ACTIVE
+</span>
+
+</div>
+
+<div class="plant">
+🌱
+</div>
+
+<div class="sensor">
+
+<div class="sensor-title">
+SOIL MOISTURE
+</div>
+
+<div class="sensor-value">
+OPTIMAL
+</div>
+
+</div>
+
+<div class="sensor">
+
+<div class="sensor-title">
+ENERGY
+</div>
+
+<div class="sensor-value">
+☀ SOLAR
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FEATURES
+========================= -->
+
+<section id="features">
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<div class="eyebrow">
+WHY ECOSHIELD
+</div>
+
+<h2>
+Nature meets
+smart technology.
+</h2>
+
+<p>
+EcoShield is designed to make plant care more responsible
+by combining several simple environmental ideas into one system.
+</p>
+
+</div>
+
+
+<div class="features">
+
+
+<div class="feature reveal">
+
+<div class="feature-icon">
+💧
+</div>
+
+<h3>
+Smart Watering
+</h3>
+
+<p>
+The soil-moisture sensor helps determine whether
+watering is actually required, helping reduce
+unnecessary irrigation.
+</p>
+
+</div>
+
+
+
+<div class="feature reveal">
+
+<div class="feature-icon">
+🌧️
+</div>
+
+<h3>
+Rainwater Reuse
+</h3>
+
+<p>
+Rainwater can be collected and stored in a reservoir,
+allowing available rainwater to be reused for gardening.
+</p>
+
+</div>
+
+
+
+<div class="feature reveal">
+
+<div class="feature-icon">
+☀️
+</div>
+
+<h3>
+Solar Powered
+</h3>
+
+<p>
+Solar energy can provide renewable power for
+EcoShield's low-energy electronic components.
+</p>
+
+</div>
+
+
+
+<div class="feature reveal">
+
+<div class="feature-icon">
+♻️
+</div>
+
+<h3>
+Less Waste
+</h3>
+
+<p>
+Recycled materials and reusable components can
+support the environmental purpose of the product.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     HOW IT WORKS
+========================= -->
+
+<section class="how" id="how">
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<div class="eyebrow">
+THE SYSTEM
+</div>
+
+<h2>
+Simple inside.<br>
+Smart outside.
+</h2>
+
+<p>
+EcoShield connects its functions into a simple cycle
+designed around the needs of the plant.
+</p>
+
+</div>
+
+
+<div class="steps">
+
+
+<div class="step reveal">
+
+<div class="step-number">
+01 — POWER
+</div>
+
+<div class="step-icon">
+☀️
+</div>
+
+<h3>
+Solar Energy
+</h3>
+
+<p>
+Sunlight provides renewable energy for the system.
+</p>
+
+</div>
+
+
+
+<div class="step reveal">
+
+<div class="step-number">
+02 — SENSE
+</div>
+
+<div class="step-icon">
+🌱
+</div>
+
+<h3>
+Check Soil
+</h3>
+
+<p>
+The sensor checks the moisture level of the soil.
+</p>
+
+</div>
+
+
+
+<div class="step reveal">
+
+<div class="step-number">
+03 — THINK
+</div>
+
+<div class="step-icon">
+🧠
+</div>
+
+<h3>
+Smart Decision
+</h3>
+
+<p>
+The controller processes the sensor information.
+</p>
+
+</div>
+
+
+
+<div class="step reveal">
+
+<div class="step-number">
+04 — WATER
+</div>
+
+<div class="step-icon">
+💦
+</div>
+
+<h3>
+Drip Irrigation
+</h3>
+
+<p>
+Water is delivered gradually near the plant.
+</p>
+
+</div>
+
+
+
+<div class="step reveal">
+
+<div class="step-number">
+05 — REUSE
+</div>
+
+<div class="step-icon">
+🌧️
+</div>
+
+<h3>
+Rainwater
+</h3>
+
+<p>
+Stored rainwater can be used for future irrigation.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     IMPACT
+========================= -->
+
+<section id="impact">
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<div class="eyebrow">
+ENVIRONMENTAL IMPACT
+</div>
+
+<h2>
+Designed for a
+greener tomorrow.
+</h2>
+
+<p>
+EcoShield focuses on practical environmental benefits
+that can be tested and improved over time.
+</p>
+
+</div>
+
+
+<div class="impact">
+
+
+<div class="impact-card reveal">
+
+<div class="big-icon">
+💧
+</div>
+
+<h3>
+Save Every Drop.
+</h3>
+
+<p>
+Smart moisture-based watering can help prevent
+unnecessary irrigation. Actual water savings should
+be measured through real testing.
+</p>
+
+</div>
+
+
+
+<div class="impact-card reveal">
+
+<div class="big-icon">
+🌍
+</div>
+
+<h3>
+Power the Future.
+</h3>
+
+<p>
+Using solar energy, reusing rainwater and considering
+recycled materials can help make plant care more
+environmentally responsible.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     VISION
+========================= -->
+
+<section class="vision" id="vision">
+
+<div class="container">
+
+<div class="vision-box reveal">
+
+<div class="eyebrow">
+OUR VISION
+</div>
+
+<h2>
+Technology should
+protect nature.
+</h2>
+
+<p>
+EcoShield is more than a plant-care device.
+It is an attempt to make every drop of water count,
+use renewable energy wherever possible, reduce
+unnecessary waste and encourage people to care
+for plants in a more responsible way.
+</p>
+
+<br>
+
+<p style="color:#39ff88;font-weight:bold;">
+🌱 Protect Plants. Save Water. Preserve Nature.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="footer">
+
+<span>
+🌱 EcoShield
+</span>
+
+<span>
+Smart plant care for a greener future 🌍
+</span>
+
+</div>
+
+</footer>
+
+
+
+<script>
+
+/* MOBILE NAVIGATION */
+
+const menu =
+document.getElementById("menu");
+
+const nav =
+document.getElementById("nav");
+
+menu.onclick = () => {
+
+nav.classList.toggle("open");
+
+};
+
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(link => {
+
+link.onclick = () => {
+
+nav.classList.remove("open");
+
+};
+
+});
+
+
+/* SCROLL REVEAL */
+
+const observer =
+new IntersectionObserver(
+
+(entries) => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},
+
+{
+threshold:.12
+}
+
+);
+
+
+document
+.querySelectorAll(".reveal")
+.forEach(element => {
+
+observer.observe(element);
+
+});
+
+
+/* PARALLAX DEVICE */
+
+window.addEventListener("mousemove",(e)=>{
+
+const device =
+document.querySelector(".eco-device");
+
+if(window.innerWidth > 900){
+
+const x =
+(e.clientX / window.innerWidth - .5) * 10;
+
+const y =
+(e.clientY / window.innerHeight - .5) * 10;
+
+device.style.transform =
+`rotate(${4+x/3}deg)
+translate(${x}px,${y}px)`;
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
