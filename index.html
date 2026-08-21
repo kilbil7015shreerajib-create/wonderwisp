@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,11 +8,6 @@
 <title>Wonder Wisp | Protect Plants. Save Water.</title>
 
 <style>
-
-/* =========================
-   GLOBAL
-========================= */
-
 *{
     margin:0;
     padding:0;
@@ -49,30 +45,24 @@ button{
     font-family:inherit;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR */
 
 header{
     position:fixed;
     top:0;
     width:100%;
     z-index:999;
-
     background:rgba(3,17,10,.65);
     backdrop-filter:blur(18px);
-
     border-bottom:1px solid rgba(57,255,136,.15);
 }
 
 .navbar{
     max-width:1250px;
     margin:auto;
-
     display:flex;
     justify-content:space-between;
     align-items:center;
-
     padding:18px 25px;
 }
 
@@ -108,38 +98,26 @@ header{
     font-size:26px;
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
     min-height:100vh;
-
     display:flex;
     align-items:center;
-
     padding:130px 25px 70px;
-
     position:relative;
     overflow:hidden;
 }
 
 .hero:before{
     content:"";
-
     position:absolute;
-
     width:550px;
     height:550px;
-
     border-radius:50%;
-
     background:var(--green);
-
     filter:blur(180px);
-
     opacity:.08;
-
     top:-200px;
     right:-150px;
 }
@@ -147,44 +125,29 @@ header{
 .hero-container{
     max-width:1250px;
     width:100%;
-
     margin:auto;
-
     display:grid;
     grid-template-columns:1.1fr .9fr;
-
     align-items:center;
-
     gap:70px;
 }
 
 .badge{
     display:inline-block;
-
     padding:9px 16px;
-
     border-radius:30px;
-
     background:rgba(57,255,136,.08);
-
     border:1px solid rgba(57,255,136,.4);
-
     color:var(--green);
-
     font-size:12px;
-
     letter-spacing:2px;
-
     margin-bottom:25px;
 }
 
 .hero h1{
     font-size:clamp(60px,8vw,115px);
-
     line-height:.87;
-
     letter-spacing:-7px;
-
     max-width:800px;
 }
 
@@ -196,21 +159,15 @@ header{
             var(--lime),
             var(--cyan)
         );
-
     -webkit-background-clip:text;
-
     color:transparent;
 }
 
 .hero p{
     max-width:650px;
-
     margin:30px 0;
-
     color:var(--text);
-
     font-size:18px;
-
     line-height:1.7;
 }
 
@@ -222,33 +179,25 @@ header{
 
 .btn{
     padding:15px 23px;
-
     border-radius:14px;
-
     font-weight:bold;
-
     transition:.3s;
-
     display:inline-block;
 }
 
 .primary{
     color:#F5F0E6;
-
     background:
         linear-gradient(
             90deg,
             var(--green),
             var(--lime)
         );
-
-    box-shadow:
-        0 0 30px rgba(57,255,136,.25);
+    box-shadow:0 0 30px rgba(57,255,136,.25);
 }
 
 .secondary{
     border:1px solid #526B5F;
-
     background:#EEF0E8;
 }
 
@@ -256,85 +205,56 @@ header{
     transform:translateY(-5px) scale(1.02);
 }
 
-/* =========================
-   ECO DEVICE VISUAL
-========================= */
+/* DEVICE */
 
 .visual{
     height:520px;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     position:relative;
 }
 
 .orbit{
     position:absolute;
-
     width:420px;
     height:420px;
-
     border-radius:50%;
-
     border:1px solid rgba(57,255,136,.15);
-
     animation:spin 15s linear infinite;
 }
 
 .orbit:before{
-    content:"☀";
-
+    content:"🔵";
     position:absolute;
-
     top:-20px;
     left:50%;
-
-    font-size:30px;
-
-    filter:drop-shadow(
-        0 0 15px #263A32
-    );
+    font-size:25px;
+    filter:drop-shadow(0 0 15px #263A32);
 }
 
 @keyframes spin{
-    from{
-        transform:rotate(0deg);
-    }
-
-    to{
-        transform:rotate(360deg);
-    }
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
 }
 
 .eco-device{
     width:330px;
     height:410px;
-
     border-radius:40px;
-
     background:
         linear-gradient(
             145deg,
             #154d2c,
             #18251F 70%
         );
-
     border:1px solid #8FA596;
-
     box-shadow:
         0 0 50px rgba(57,255,136,.15),
         0 35px 80px rgba(0,0,0,.6);
-
     transform:rotate(4deg);
-
     animation:float 5s ease-in-out infinite;
-
     position:relative;
-
     z-index:2;
 }
 
@@ -348,41 +268,28 @@ header{
 
 .device-glow{
     position:absolute;
-
     width:180px;
     height:180px;
-
     background:var(--green);
-
     filter:blur(90px);
-
     opacity:.15;
-
     top:-80px;
     right:-60px;
 }
 
 .device-screen{
     margin:25px;
-
     height:360px;
-
     border-radius:28px;
-
     background:#031008;
-
     border:1px solid #1c5531;
-
     padding:25px;
 }
 
 .device-top{
     display:flex;
-
     justify-content:space-between;
-
     font-size:11px;
-
     color:#8FA596;
 }
 
@@ -392,46 +299,31 @@ header{
 
 .plant{
     text-align:center;
-
     font-size:100px;
-
     margin:35px 0;
-
-    filter:
-        drop-shadow(
-            0 0 20px rgba(57,255,136,.4)
-        );
+    filter:drop-shadow(0 0 20px rgba(57,255,136,.4));
 }
 
 .sensor{
     padding:15px;
-
     border-radius:15px;
-
     background:#EEF0E8;
-
     border:1px solid #C9D2CB;
-
     margin-bottom:12px;
 }
 
 .sensor-title{
     color:#8aa993;
-
     font-size:12px;
 }
 
 .sensor-value{
     color:var(--green);
-
     font-size:22px;
-
     font-weight:bold;
 }
 
-/* =========================
-   SECTIONS
-========================= */
+/* SECTIONS */
 
 section{
     padding:120px 25px;
@@ -439,134 +331,94 @@ section{
 
 .container{
     max-width:1150px;
-
     margin:auto;
 }
 
 .section-title{
     max-width:750px;
-
     margin-bottom:55px;
 }
 
 .eyebrow{
     color:var(--green);
-
     font-size:12px;
-
     letter-spacing:3px;
-
     font-weight:bold;
 }
 
 h2{
     font-size:clamp(42px,6vw,75px);
-
     line-height:.95;
-
     letter-spacing:-4px;
-
     margin:14px 0 20px;
 }
 
 .section-title p{
     color:var(--text);
-
     line-height:1.7;
-
     font-size:17px;
 }
 
-/* =========================
-   FEATURE CARDS
-========================= */
+/* FEATURES */
 
 .features{
     display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
+    grid-template-columns:repeat(4,1fr);
     gap:18px;
 }
 
 .feature{
     padding:30px;
-
     min-height:260px;
-
     border-radius:25px;
-
     background:
         linear-gradient(
             145deg,
             rgba(16,58,32,.9),
             rgba(7,28,16,.9)
         );
-
     border:1px solid #526B5F;
-
     position:relative;
-
     overflow:hidden;
-
     transition:.4s;
 }
 
 .feature:after{
     content:"";
-
     position:absolute;
-
     width:120px;
     height:120px;
-
     border-radius:50%;
-
     background:var(--green);
-
     filter:blur(70px);
-
     opacity:.06;
-
     right:-50px;
     bottom:-50px;
 }
 
 .feature:hover{
-    transform:
-        translateY(-12px)
-        rotateX(3deg);
-
+    transform:translateY(-12px) rotateX(3deg);
     border-color:#B49A62;
-
-    box-shadow:
-        0 25px 60px rgba(0,0,0,.35);
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
 }
 
 .feature-icon{
     font-size:42px;
-
     margin-bottom:25px;
 }
 
 .feature h3{
     font-size:20px;
-
     margin-bottom:12px;
 }
 
 .feature p{
     color:var(--text);
-
     line-height:1.7;
-
     font-size:14px;
 }
 
-/* =========================
-   HOW IT WORKS
-========================= */
+/* HOW IT WORKS */
 
 .how{
     background:
@@ -580,94 +432,65 @@ h2{
 
 .steps{
     display:grid;
-
-    grid-template-columns:
-        repeat(5,1fr);
-
+    grid-template-columns:repeat(5,1fr);
     gap:10px;
 }
 
 .step{
     padding:25px;
-
     background:#F0F1EB;
-
     border:1px solid #526B5F;
-
     border-radius:20px;
-
     transition:.3s;
 }
 
 .step:hover{
     background:#E5E9E3;
-
     transform:translateY(-7px);
 }
 
 .step-number{
     color:var(--green);
-
     font-size:11px;
-
     font-weight:bold;
-
     margin-bottom:20px;
 }
 
 .step-icon{
     font-size:36px;
-
     margin-bottom:12px;
 }
 
 .step p{
     color:var(--text);
-
     font-size:14px;
-
     margin-top:8px;
-
     line-height:1.6;
 }
 
-/* =========================
-   BIG STATEMENT
-========================= */
+/* IMPACT */
 
 .impact{
     display:grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
+    grid-template-columns:1fr 1fr;
     gap:25px;
 }
 
 .impact-card{
     min-height:360px;
-
     padding:40px;
-
     border-radius:30px;
-
     position:relative;
-
     overflow:hidden;
-
     display:flex;
-
     flex-direction:column;
-
     justify-content:flex-end;
-
     background:
         linear-gradient(
             145deg,
             #30483D,
             #18251F
         );
-
     border:1px solid #657B70;
 }
 
@@ -683,31 +506,23 @@ h2{
 
 .impact-card h3{
     font-size:35px;
-
     margin-bottom:12px;
 }
 
 .impact-card p{
     color:var(--text);
-
     line-height:1.7;
 }
 
 .big-icon{
     position:absolute;
-
     right:35px;
-
     top:30px;
-
     font-size:100px;
-
     opacity:.25;
 }
 
-/* =========================
-   VISION
-========================= */
+/* VISION */
 
 .vision{
     text-align:center;
@@ -715,13 +530,9 @@ h2{
 
 .vision-box{
     max-width:1000px;
-
     margin:auto;
-
     padding:80px 40px;
-
     border-radius:35px;
-
     background:
         radial-gradient(
             circle at center,
@@ -729,11 +540,8 @@ h2{
             transparent 60%
         ),
         #EEF0E8;
-
     border:1px solid #657B70;
-
-    box-shadow:
-        0 0 80px rgba(57,255,136,.08);
+    box-shadow:0 0 80px rgba(57,255,136,.08);
 }
 
 .vision-box h2{
@@ -742,79 +550,40 @@ h2{
 
 .vision-box p{
     color:var(--text);
-
     max-width:750px;
-
     margin:auto;
-
     font-size:18px;
-
     line-height:1.8;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
     padding:40px 25px;
-
     border-top:1px solid #CBD3CD;
-
     color:#71847A;
 }
 
 .footer{
     max-width:1150px;
-
     margin:auto;
-
     display:flex;
-
     justify-content:space-between;
-
     gap:20px;
 }
 
-/* =========================
-   SCROLL ANIMATION
-========================= */
-
-.reveal{
-    opacity:0;
-
-    transform:translateY(35px);
-
-    transition:
-        opacity .8s ease,
-        transform .8s ease;
-}
-
-.reveal.show{
-    opacity:1;
-
-    transform:none;
-}
-
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:900px){
 
     .nav-links{
         display:none;
-
         position:absolute;
-
         top:70px;
         left:0;
         right:0;
-
         padding:25px;
-
         background:#04150b;
-
         flex-direction:column;
     }
 
@@ -866,87 +635,9 @@ footer{
         flex-direction:column;
     }
 }
-
 </style>
 
-<style id="wonderwisp-brand">
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
-
-:root{
-    --brand-green:#263A32;
-    --brand-plum:#3D3045;
-    --brand-ivory:#F5F0E6;
-    --brand-sage:#8FA596;
-    --brand-gold:#B49A62;
-}
-
-body{
-    font-family:'Inter',Arial,Helvetica,sans-serif;
-    background:
-        radial-gradient(circle at 12% 10%, rgba(180,154,98,.13), transparent 24%),
-        radial-gradient(circle at 88% 65%, rgba(143,165,150,.14), transparent 28%),
-        var(--brand-ivory);
-    color:var(--brand-green);
-}
-
-.logo, .hero h1, h2, .feature h3, .step h3, .impact-card h3{
-    font-family:'Cormorant Garamond',Georgia,serif;
-}
-
-.logo{
-    letter-spacing:.5px;
-}
-
-.logo span{
-    color:var(--brand-plum);
-}
-
-.hero h1 span{
-    background:linear-gradient(90deg,var(--brand-green),var(--brand-plum),var(--brand-gold));
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-}
-
-.badge, .eyebrow{
-    color:var(--brand-gold);
-}
-
-.primary{
-    color:var(--brand-ivory);
-    background:linear-gradient(90deg,var(--brand-green),var(--brand-plum));
-}
-
-.secondary{
-    color:var(--brand-green);
-    border-color:rgba(61,48,69,.25);
-    background:rgba(255,255,255,.35);
-}
-
-.feature:hover, .step:hover{
-    border-color:var(--brand-gold);
-}
-
-.vision-box{
-    background:
-        radial-gradient(circle at center, rgba(180,154,98,.13), transparent 60%),
-        #ECEDE6;
-}
-
-footer{
-    color:#71847A;
-}
-
-@media(max-width:550px){
-    .hero h1{font-size:58px;}
-}
-</style>
-
-
-
-
-
-<style id="wonderwisp-clean-style">
+<style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
 
 body{
@@ -954,152 +645,239 @@ body{
     background:#F5F0E6;
     color:#263A32;
 }
+
 h1,h2,h3,.logo{
     font-family:'Playfair Display',Georgia,serif;
 }
+
 header{
     background:#263A32;
     border-bottom:1px solid #657B70;
 }
-.logo{color:#F5F0E6;}
-.logo span{color:#B49A62;}
-.nav-links a{color:#F5F0E6;}
-.nav-links a:hover{color:#B49A62;}
+
+.logo{
+    color:#F5F0E6;
+}
+
+.logo span{
+    color:#B49A62;
+}
+
+.nav-links a{
+    color:#F5F0E6;
+}
+
+.nav-links a:hover{
+    color:#B49A62;
+}
 
 .hero{
     background:#F5F0E6;
 }
-.hero h1{color:#263A32;}
+
+.hero h1{
+    color:#263A32;
+}
+
 .hero h1 span{
     background:none;
     -webkit-background-clip:initial;
     background-clip:initial;
     color:#3D3045;
 }
-.hero p{color:#52635A;}
+
+.hero p{
+    color:#52635A;
+}
+
 .badge{
     color:#3D3045;
     background:#EEE7D8;
     border-color:#B49A62;
 }
 
-.section-title h2{color:#263A32;}
-.section-title p{color:#52635A;}
-.eyebrow{color:#8A6B2F;}
+.section-title h2{
+    color:#263A32;
+}
+
+.section-title p{
+    color:#52635A;
+}
+
+.eyebrow{
+    color:#8A6B2F;
+}
 
 .feature{
     background:#30483D;
     border-color:#657B70;
 }
-.feature h3{color:#F5F0E6;}
-.feature p{color:#DCE4DE;}
+
+.feature h3{
+    color:#F5F0E6;
+}
+
+.feature p{
+    color:#DCE4DE;
+}
 
 .step{
     background:#FFFDF7;
     border-color:#D0D5CF;
 }
-.step h3{color:#263A32;}
-.step p{color:#52635A;}
-.step-number{color:#8A6B2F;}
-.step:hover{background:#FFFDF7;border-color:#B49A62;}
+
+.step h3{
+    color:#263A32;
+}
+
+.step p{
+    color:#52635A;
+}
+
+.step-number{
+    color:#8A6B2F;
+}
+
+.step:hover{
+    background:#FFFDF7;
+    border-color:#B49A62;
+}
 
 .impact-card{
     background:#30483D;
     border-color:#657B70;
 }
-.impact-card h3{color:#F5F0E6;}
-.impact-card p{color:#DCE4DE;}
+
+.impact-card h3{
+    color:#F5F0E6;
+}
+
+.impact-card p{
+    color:#DCE4DE;
+}
 
 .vision-box{
     background:#EEEDE5;
     border-color:#B8BDB6;
 }
-.vision-box h2{color:#263A32;}
-.vision-box p{color:#52635A;}
+
+.vision-box h2{
+    color:#263A32;
+}
+
+.vision-box p{
+    color:#52635A;
+}
 
 .primary{
     color:#F5F0E6;
     background:#3D3045;
     box-shadow:none;
 }
+
 .secondary{
     color:#263A32;
     background:#FFFDF7;
     border-color:#AEB8B1;
 }
-.secondary:hover{border-color:#B49A62;}
 
-.device-screen{background:#18251F;}
-.sensor{background:#30483D;border-color:#526B5F;}
-.sensor-title{color:#DCE4DE;}
-.sensor-value{color:#B49A62;}
-.live{color:#8FA596;}
+.secondary:hover{
+    border-color:#B49A62;
+}
+
+.device-screen{
+    background:#18251F;
+}
+
+.sensor{
+    background:#30483D;
+    border-color:#526B5F;
+}
+
+.sensor-title{
+    color:#DCE4DE;
+}
+
+.sensor-value{
+    color:#B49A62;
+}
+
+.live{
+    color:#8FA596;
+}
 
 footer{
     background:#263A32;
     border-top:1px solid #657B70;
     color:#DCE4DE;
 }
-.footer span:first-child{color:#F5F0E6;}
-.footer span:last-child{color:#C8D5CE;}
+
+.footer span:first-child{
+    color:#F5F0E6;
+}
+
+.footer span:last-child{
+    color:#C8D5CE;
+}
 
 .reveal{
     opacity:1;
     transform:none;
 }
-.feature:hover,.step:hover,.btn:hover{
+
+.feature:hover,
+.step:hover,
+.btn:hover{
     transform:none;
 }
+
 @media(max-width:900px){
-    .nav-links{background:#263A32;}
-    .nav-links a{color:#F5F0E6;}
+    .nav-links{
+        background:#263A32;
+    }
+
+    .nav-links a{
+        color:#F5F0E6;
+    }
+}
+
+@media(max-width:550px){
+    .hero h1{
+        font-size:58px;
+    }
 }
 </style>
 
 </head>
 
-
 <body>
 
-
-<!-- =========================
-     NAVIGATION
-========================= -->
-
 <header>
-
 <div class="navbar">
 
 <a href="#home" class="logo">
-🌱 Eco<span>Shield</span>
+🌱 Wonder <span>Wisp</span>
 </a>
 
 <button class="menu" id="menu">☰</button>
 
 <nav class="nav-links" id="nav">
-
 <a href="#home">Home</a>
 <a href="#features">Features</a>
 <a href="#how">How It Works</a>
 <a href="#impact">Impact</a>
 <a href="#vision">Vision</a>
-
 </nav>
 
 </div>
-
 </header>
 
 
-
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
 <div class="hero-container">
-
 
 <div class="reveal">
 
@@ -1116,7 +894,7 @@ Protect Plants.
 <p>
 Wonder Wisp is a smart, eco-friendly plant-care concept
 that combines soil-moisture monitoring, rainwater reuse,
-solar energy and controlled drip irrigation.
+controlled drip irrigation and Bluetooth connectivity.
 </p>
 
 <div class="buttons">
@@ -1134,7 +912,6 @@ Discover How It Works →
 </div>
 
 
-
 <div class="visual reveal">
 
 <div class="orbit"></div>
@@ -1150,7 +927,7 @@ Discover How It Works →
 <span>WONDER WISP SYSTEM</span>
 
 <span class="live">
-● ACTIVE
+● CONNECTED
 </span>
 
 </div>
@@ -1174,11 +951,11 @@ OPTIMAL
 <div class="sensor">
 
 <div class="sensor-title">
-ENERGY
+CONNECTION
 </div>
 
 <div class="sensor-value">
-☀ SOLAR
+🔵 BLUETOOTH
 </div>
 
 </div>
@@ -1188,17 +965,13 @@ ENERGY
 </div>
 
 </div>
-
 
 </div>
 
 </section>
 
 
-
-<!-- =========================
-     FEATURES
-========================= -->
+<!-- FEATURES -->
 
 <section id="features">
 
@@ -1225,7 +998,6 @@ by combining several simple environmental ideas into one system.
 
 <div class="features">
 
-
 <div class="feature reveal">
 
 <div class="feature-icon">
@@ -1243,7 +1015,6 @@ unnecessary irrigation.
 </p>
 
 </div>
-
 
 
 <div class="feature reveal">
@@ -1264,43 +1035,42 @@ allowing available rainwater to be reused for gardening.
 </div>
 
 
-
 <div class="feature reveal">
 
 <div class="feature-icon">
-☀️
+🔵
 </div>
 
 <h3>
-Solar Powered
+Bluetooth Connectivity
 </h3>
 
 <p>
-Solar energy can provide renewable power for
-WonderWisp's low-energy electronic components.
+Wonder Wisp can connect to a nearby phone or compatible
+device through Bluetooth, allowing system information
+to be monitored wirelessly.
 </p>
 
 </div>
 
 
-
 <div class="feature reveal">
 
 <div class="feature-icon">
-♻️
+🔋
 </div>
 
 <h3>
-Less Waste
+Not Solar Powered
 </h3>
 
 <p>
-Recycled materials and reusable components can
-support the environmental purpose of the product.
+Wonder Wisp does not rely on solar power. The electronic
+system can instead use a suitable battery or external
+electrical power source.
 </p>
 
 </div>
-
 
 </div>
 
@@ -1309,10 +1079,7 @@ support the environmental purpose of the product.
 </section>
 
 
-
-<!-- =========================
-     HOW IT WORKS
-========================= -->
+<!-- HOW IT WORKS -->
 
 <section class="how" id="how">
 
@@ -1339,7 +1106,6 @@ designed around the needs of the plant.
 
 <div class="steps">
 
-
 <div class="step reveal">
 
 <div class="step-number">
@@ -1347,19 +1113,19 @@ designed around the needs of the plant.
 </div>
 
 <div class="step-icon">
-☀️
+🔋
 </div>
 
 <h3>
-Solar Energy
+Power Supply
 </h3>
 
 <p>
-Sunlight provides renewable energy for the system.
+The system operates using a suitable battery
+or external electrical power source.
 </p>
 
 </div>
-
 
 
 <div class="step reveal">
@@ -1383,27 +1149,26 @@ The sensor checks the moisture level of the soil.
 </div>
 
 
-
 <div class="step reveal">
 
 <div class="step-number">
-03 — THINK
+03 — CONNECT
 </div>
 
 <div class="step-icon">
-🧠
+🔵
 </div>
 
 <h3>
-Smart Decision
+Bluetooth
 </h3>
 
 <p>
-The controller processes the sensor information.
+Information can be communicated wirelessly
+to a nearby compatible device.
 </p>
 
 </div>
-
 
 
 <div class="step reveal">
@@ -1421,11 +1186,11 @@ Drip Irrigation
 </h3>
 
 <p>
-Water is delivered gradually near the plant.
+Water is delivered gradually near the plant
+when watering is needed.
 </p>
 
 </div>
-
 
 
 <div class="step reveal">
@@ -1448,7 +1213,6 @@ Stored rainwater can be used for future irrigation.
 
 </div>
 
-
 </div>
 
 </div>
@@ -1456,10 +1220,7 @@ Stored rainwater can be used for future irrigation.
 </section>
 
 
-
-<!-- =========================
-     IMPACT
-========================= -->
+<!-- IMPACT -->
 
 <section id="impact">
 
@@ -1486,7 +1247,6 @@ that can be tested and improved over time.
 
 <div class="impact">
 
-
 <div class="impact-card reveal">
 
 <div class="big-icon">
@@ -1506,25 +1266,23 @@ be measured through real testing.
 </div>
 
 
-
 <div class="impact-card reveal">
 
 <div class="big-icon">
-🌍
+🔵
 </div>
 
 <h3>
-Power the Future.
+Stay Connected.
 </h3>
 
 <p>
-Using solar energy, reusing rainwater and considering
-recycled materials can help make plant care more
-environmentally responsible.
+Bluetooth connectivity allows the system to communicate
+wirelessly with a compatible device, making plant-care
+information easier to monitor.
 </p>
 
 </div>
-
 
 </div>
 
@@ -1533,10 +1291,7 @@ environmentally responsible.
 </section>
 
 
-
-<!-- =========================
-     VISION
-========================= -->
+<!-- VISION -->
 
 <section class="vision" id="vision">
 
@@ -1556,9 +1311,10 @@ protect nature.
 <p>
 Wonder Wisp is more than a plant-care device.
 It is an attempt to make every drop of water count,
-use renewable energy wherever possible, reduce
-unnecessary waste and encourage people to care
-for plants in a more responsible way.
+reuse rainwater, reduce unnecessary waste and encourage
+people to care for plants in a more responsible way.
+The system uses Bluetooth connectivity rather than
+depending on solar power.
 </p>
 
 <br>
@@ -1574,10 +1330,7 @@ for plants in a more responsible way.
 </section>
 
 
-
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -1596,42 +1349,27 @@ Smart plant care for a greener future 🌍
 </footer>
 
 
-
 <script>
 
-/* MOBILE NAVIGATION */
-
-const menu =
-document.getElementById("menu");
-
-const nav =
-document.getElementById("nav");
+const menu = document.getElementById("menu");
+const nav = document.getElementById("nav");
 
 menu.onclick = () => {
-
-nav.classList.toggle("open");
-
+    nav.classList.toggle("open");
 };
-
 
 document
 .querySelectorAll(".nav-links a")
 .forEach(link => {
 
-link.onclick = () => {
-
-nav.classList.remove("open");
-
-};
+    link.onclick = () => {
+        nav.classList.remove("open");
+    };
 
 });
-
-
-/* SIMPLE INTERACTION ONLY */
-
-
 
 </script>
 
 </body>
 </html>
+```
