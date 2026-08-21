@@ -8,6 +8,7 @@
 <title>Wonder Wisp | Protect Plants. Save Water.</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -45,24 +46,30 @@ button{
     font-family:inherit;
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 
 header{
     position:fixed;
     top:0;
     width:100%;
     z-index:999;
+
     background:rgba(3,17,10,.65);
     backdrop-filter:blur(18px);
+
     border-bottom:1px solid rgba(57,255,136,.15);
 }
 
 .navbar{
     max-width:1250px;
     margin:auto;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     padding:18px 25px;
 }
 
@@ -98,26 +105,38 @@ header{
     font-size:26px;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
     min-height:100vh;
+
     display:flex;
     align-items:center;
+
     padding:130px 25px 70px;
+
     position:relative;
     overflow:hidden;
 }
 
 .hero:before{
     content:"";
+
     position:absolute;
+
     width:550px;
     height:550px;
+
     border-radius:50%;
+
     background:var(--green);
+
     filter:blur(180px);
+
     opacity:.08;
+
     top:-200px;
     right:-150px;
 }
@@ -125,29 +144,44 @@ header{
 .hero-container{
     max-width:1250px;
     width:100%;
+
     margin:auto;
+
     display:grid;
     grid-template-columns:1.1fr .9fr;
+
     align-items:center;
+
     gap:70px;
 }
 
 .badge{
     display:inline-block;
+
     padding:9px 16px;
+
     border-radius:30px;
+
     background:rgba(57,255,136,.08);
+
     border:1px solid rgba(57,255,136,.4);
+
     color:var(--green);
+
     font-size:12px;
+
     letter-spacing:2px;
+
     margin-bottom:25px;
 }
 
 .hero h1{
     font-size:clamp(60px,8vw,115px);
+
     line-height:.87;
+
     letter-spacing:-7px;
+
     max-width:800px;
 }
 
@@ -159,15 +193,21 @@ header{
             var(--lime),
             var(--cyan)
         );
+
     -webkit-background-clip:text;
+
     color:transparent;
 }
 
 .hero p{
     max-width:650px;
+
     margin:30px 0;
+
     color:var(--text);
+
     font-size:18px;
+
     line-height:1.7;
 }
 
@@ -179,25 +219,33 @@ header{
 
 .btn{
     padding:15px 23px;
+
     border-radius:14px;
+
     font-weight:bold;
+
     transition:.3s;
+
     display:inline-block;
 }
 
 .primary{
     color:#F5F0E6;
+
     background:
         linear-gradient(
             90deg,
             var(--green),
             var(--lime)
         );
-    box-shadow:0 0 30px rgba(57,255,136,.25);
+
+    box-shadow:
+        0 0 30px rgba(57,255,136,.25);
 }
 
 .secondary{
     border:1px solid #526B5F;
+
     background:#EEF0E8;
 }
 
@@ -205,56 +253,85 @@ header{
     transform:translateY(-5px) scale(1.02);
 }
 
-/* DEVICE */
+/* =========================
+   DEVICE
+========================= */
 
 .visual{
     height:520px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     position:relative;
 }
 
 .orbit{
     position:absolute;
+
     width:420px;
     height:420px;
+
     border-radius:50%;
+
     border:1px solid rgba(57,255,136,.15);
+
     animation:spin 15s linear infinite;
 }
 
 .orbit:before{
     content:"🔵";
+
     position:absolute;
+
     top:-20px;
     left:50%;
+
     font-size:25px;
-    filter:drop-shadow(0 0 15px #263A32);
+
+    filter:drop-shadow(
+        0 0 15px #263A32
+    );
 }
 
 @keyframes spin{
-    from{transform:rotate(0deg);}
-    to{transform:rotate(360deg);}
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
 }
 
 .eco-device{
     width:330px;
     height:410px;
+
     border-radius:40px;
+
     background:
         linear-gradient(
             145deg,
             #154d2c,
             #18251F 70%
         );
+
     border:1px solid #8FA596;
+
     box-shadow:
         0 0 50px rgba(57,255,136,.15),
         0 35px 80px rgba(0,0,0,.6);
+
     transform:rotate(4deg);
+
     animation:float 5s ease-in-out infinite;
+
     position:relative;
+
     z-index:2;
 }
 
@@ -268,28 +345,41 @@ header{
 
 .device-glow{
     position:absolute;
+
     width:180px;
     height:180px;
+
     background:var(--green);
+
     filter:blur(90px);
+
     opacity:.15;
+
     top:-80px;
     right:-60px;
 }
 
 .device-screen{
     margin:25px;
+
     height:360px;
+
     border-radius:28px;
+
     background:#031008;
+
     border:1px solid #1c5531;
+
     padding:25px;
 }
 
 .device-top{
     display:flex;
+
     justify-content:space-between;
+
     font-size:11px;
+
     color:#8FA596;
 }
 
@@ -299,31 +389,46 @@ header{
 
 .plant{
     text-align:center;
+
     font-size:100px;
+
     margin:35px 0;
-    filter:drop-shadow(0 0 20px rgba(57,255,136,.4));
+
+    filter:
+        drop-shadow(
+            0 0 20px rgba(57,255,136,.4)
+        );
 }
 
 .sensor{
     padding:15px;
+
     border-radius:15px;
+
     background:#EEF0E8;
+
     border:1px solid #C9D2CB;
+
     margin-bottom:12px;
 }
 
 .sensor-title{
     color:#8aa993;
+
     font-size:12px;
 }
 
 .sensor-value{
     color:var(--green);
+
     font-size:22px;
+
     font-weight:bold;
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 
 section{
     padding:120px 25px;
@@ -331,94 +436,134 @@ section{
 
 .container{
     max-width:1150px;
+
     margin:auto;
 }
 
 .section-title{
     max-width:750px;
+
     margin-bottom:55px;
 }
 
 .eyebrow{
     color:var(--green);
+
     font-size:12px;
+
     letter-spacing:3px;
+
     font-weight:bold;
 }
 
 h2{
     font-size:clamp(42px,6vw,75px);
+
     line-height:.95;
+
     letter-spacing:-4px;
+
     margin:14px 0 20px;
 }
 
 .section-title p{
     color:var(--text);
+
     line-height:1.7;
+
     font-size:17px;
 }
 
-/* FEATURES */
+/* =========================
+   FEATURE CARDS
+========================= */
 
 .features{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+
+    grid-template-columns:
+        repeat(4,1fr);
+
     gap:18px;
 }
 
 .feature{
     padding:30px;
+
     min-height:260px;
+
     border-radius:25px;
+
     background:
         linear-gradient(
             145deg,
             rgba(16,58,32,.9),
             rgba(7,28,16,.9)
         );
+
     border:1px solid #526B5F;
+
     position:relative;
+
     overflow:hidden;
+
     transition:.4s;
 }
 
 .feature:after{
     content:"";
+
     position:absolute;
+
     width:120px;
     height:120px;
+
     border-radius:50%;
+
     background:var(--green);
+
     filter:blur(70px);
+
     opacity:.06;
+
     right:-50px;
     bottom:-50px;
 }
 
 .feature:hover{
-    transform:translateY(-12px) rotateX(3deg);
+    transform:
+        translateY(-12px)
+        rotateX(3deg);
+
     border-color:#B49A62;
-    box-shadow:0 25px 60px rgba(0,0,0,.35);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.35);
 }
 
 .feature-icon{
     font-size:42px;
+
     margin-bottom:25px;
 }
 
 .feature h3{
     font-size:20px;
+
     margin-bottom:12px;
 }
 
 .feature p{
     color:var(--text);
+
     line-height:1.7;
+
     font-size:14px;
 }
 
-/* HOW IT WORKS */
+/* =========================
+   HOW IT WORKS
+========================= */
 
 .how{
     background:
@@ -432,67 +577,98 @@ h2{
 
 .steps{
     display:grid;
-    grid-template-columns:repeat(5,1fr);
+
+    grid-template-columns:
+        repeat(5,1fr);
+
     gap:10px;
 }
 
 .step{
     padding:25px;
+
     background:#F0F1EB;
+
     border:1px solid #526B5F;
+
     border-radius:20px;
+
     transition:.3s;
 }
 
 .step:hover{
     background:#E5E9E3;
+
     transform:translateY(-7px);
 }
 
 .step-number{
     color:var(--green);
+
     font-size:11px;
+
     font-weight:bold;
+
     margin-bottom:20px;
 }
 
 .step-icon{
     font-size:36px;
+
     margin-bottom:12px;
 }
 
 .step p{
     color:var(--text);
+
     font-size:14px;
+
     margin-top:8px;
+
     line-height:1.6;
 }
 
-/* IMPACT */
+/* =========================
+   IMPACT
+========================= */
 
 .impact{
     display:grid;
-    grid-template-columns:1fr 1fr;
+
+    grid-template-columns:
+        1fr 1fr;
+
     gap:25px;
 }
 
 .impact-card{
     min-height:360px;
+
     padding:40px;
+
     border-radius:30px;
+
     position:relative;
+
     overflow:hidden;
+
     display:flex;
+
     flex-direction:column;
+
     justify-content:flex-end;
+
     background:
         linear-gradient(
             145deg,
             #30483D,
             #18251F
         );
+
     border:1px solid #657B70;
 }
+
+/* SAVE EVERY DROP CARD */
 
 .impact-card:first-child{
     background:
@@ -504,25 +680,45 @@ h2{
         #E4EBE5;
 }
 
+/* FIXED DARK TEXT FOR LIGHT CARD */
+
+.impact-card:first-child h3{
+    color:#263A32;
+}
+
+.impact-card:first-child p{
+    color:#52635A;
+}
+
+/* SECOND IMPACT CARD */
+
 .impact-card h3{
     font-size:35px;
+
     margin-bottom:12px;
 }
 
 .impact-card p{
     color:var(--text);
+
     line-height:1.7;
 }
 
 .big-icon{
     position:absolute;
+
     right:35px;
+
     top:30px;
+
     font-size:100px;
+
     opacity:.25;
 }
 
-/* VISION */
+/* =========================
+   VISION
+========================= */
 
 .vision{
     text-align:center;
@@ -530,9 +726,13 @@ h2{
 
 .vision-box{
     max-width:1000px;
+
     margin:auto;
+
     padding:80px 40px;
+
     border-radius:35px;
+
     background:
         radial-gradient(
             circle at center,
@@ -540,8 +740,11 @@ h2{
             transparent 60%
         ),
         #EEF0E8;
+
     border:1px solid #657B70;
-    box-shadow:0 0 80px rgba(57,255,136,.08);
+
+    box-shadow:
+        0 0 80px rgba(57,255,136,.08);
 }
 
 .vision-box h2{
@@ -550,40 +753,59 @@ h2{
 
 .vision-box p{
     color:var(--text);
+
     max-width:750px;
+
     margin:auto;
+
     font-size:18px;
+
     line-height:1.8;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     padding:40px 25px;
+
     border-top:1px solid #CBD3CD;
+
     color:#71847A;
 }
 
 .footer{
     max-width:1150px;
+
     margin:auto;
+
     display:flex;
+
     justify-content:space-between;
+
     gap:20px;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:900px){
 
     .nav-links{
         display:none;
+
         position:absolute;
+
         top:70px;
         left:0;
         right:0;
+
         padding:25px;
+
         background:#04150b;
+
         flex-direction:column;
     }
 
@@ -635,9 +857,12 @@ footer{
         flex-direction:column;
     }
 }
+
 </style>
 
-<style>
+
+<style id="wonderwisp-brand">
+
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
 
 body{
@@ -681,8 +906,11 @@ header{
 
 .hero h1 span{
     background:none;
+
     -webkit-background-clip:initial;
+
     background-clip:initial;
+
     color:#3D3045;
 }
 
@@ -692,7 +920,9 @@ header{
 
 .badge{
     color:#3D3045;
+
     background:#EEE7D8;
+
     border-color:#B49A62;
 }
 
@@ -710,6 +940,7 @@ header{
 
 .feature{
     background:#30483D;
+
     border-color:#657B70;
 }
 
@@ -723,6 +954,7 @@ header{
 
 .step{
     background:#FFFDF7;
+
     border-color:#D0D5CF;
 }
 
@@ -740,11 +972,13 @@ header{
 
 .step:hover{
     background:#FFFDF7;
+
     border-color:#B49A62;
 }
 
 .impact-card{
     background:#30483D;
+
     border-color:#657B70;
 }
 
@@ -756,8 +990,19 @@ header{
     color:#DCE4DE;
 }
 
+/* KEEP SAVE EVERY DROP DARK */
+
+.impact-card:first-child h3{
+    color:#263A32;
+}
+
+.impact-card:first-child p{
+    color:#52635A;
+}
+
 .vision-box{
     background:#EEEDE5;
+
     border-color:#B8BDB6;
 }
 
@@ -771,13 +1016,17 @@ header{
 
 .primary{
     color:#F5F0E6;
+
     background:#3D3045;
+
     box-shadow:none;
 }
 
 .secondary{
     color:#263A32;
+
     background:#FFFDF7;
+
     border-color:#AEB8B1;
 }
 
@@ -791,6 +1040,7 @@ header{
 
 .sensor{
     background:#30483D;
+
     border-color:#526B5F;
 }
 
@@ -808,7 +1058,9 @@ header{
 
 footer{
     background:#263A32;
+
     border-top:1px solid #657B70;
+
     color:#DCE4DE;
 }
 
@@ -822,6 +1074,7 @@ footer{
 
 .reveal{
     opacity:1;
+
     transform:none;
 }
 
@@ -832,6 +1085,7 @@ footer{
 }
 
 @media(max-width:900px){
+
     .nav-links{
         background:#263A32;
     }
@@ -842,42 +1096,59 @@ footer{
 }
 
 @media(max-width:550px){
+
     .hero h1{
         font-size:58px;
     }
 }
+
 </style>
 
 </head>
 
+
 <body>
 
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
 <header>
+
 <div class="navbar">
 
 <a href="#home" class="logo">
 🌱 Wonder <span>Wisp</span>
 </a>
 
-<button class="menu" id="menu">☰</button>
+<button class="menu" id="menu">
+☰
+</button>
 
 <nav class="nav-links" id="nav">
+
 <a href="#home">Home</a>
 <a href="#features">Features</a>
 <a href="#how">How It Works</a>
 <a href="#impact">Impact</a>
 <a href="#vision">Vision</a>
+
 </nav>
 
 </div>
+
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero" id="home">
 
 <div class="hero-container">
+
 
 <div class="reveal">
 
@@ -924,7 +1195,9 @@ Discover How It Works →
 
 <div class="device-top">
 
-<span>WONDER WISP SYSTEM</span>
+<span>
+WONDER WISP SYSTEM
+</span>
 
 <span class="live">
 ● CONNECTED
@@ -971,7 +1244,9 @@ CONNECTION
 </section>
 
 
-<!-- FEATURES -->
+<!-- =========================
+     FEATURES
+========================= -->
 
 <section id="features">
 
@@ -997,6 +1272,7 @@ by combining several simple environmental ideas into one system.
 
 
 <div class="features">
+
 
 <div class="feature reveal">
 
@@ -1072,6 +1348,7 @@ electrical power source.
 
 </div>
 
+
 </div>
 
 </div>
@@ -1079,7 +1356,9 @@ electrical power source.
 </section>
 
 
-<!-- HOW IT WORKS -->
+<!-- =========================
+     HOW IT WORKS
+========================= -->
 
 <section class="how" id="how">
 
@@ -1105,6 +1384,7 @@ designed around the needs of the plant.
 
 
 <div class="steps">
+
 
 <div class="step reveal">
 
@@ -1213,6 +1493,7 @@ Stored rainwater can be used for future irrigation.
 
 </div>
 
+
 </div>
 
 </div>
@@ -1220,7 +1501,9 @@ Stored rainwater can be used for future irrigation.
 </section>
 
 
-<!-- IMPACT -->
+<!-- =========================
+     IMPACT
+========================= -->
 
 <section id="impact">
 
@@ -1246,6 +1529,7 @@ that can be tested and improved over time.
 
 
 <div class="impact">
+
 
 <div class="impact-card reveal">
 
@@ -1284,6 +1568,7 @@ information easier to monitor.
 
 </div>
 
+
 </div>
 
 </div>
@@ -1291,7 +1576,9 @@ information easier to monitor.
 </section>
 
 
-<!-- VISION -->
+<!-- =========================
+     VISION
+========================= -->
 
 <section class="vision" id="vision">
 
@@ -1330,7 +1617,9 @@ depending on solar power.
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -1351,20 +1640,27 @@ Smart plant care for a greener future 🌍
 
 <script>
 
-const menu = document.getElementById("menu");
-const nav = document.getElementById("nav");
+const menu =
+document.getElementById("menu");
+
+const nav =
+document.getElementById("nav");
 
 menu.onclick = () => {
-    nav.classList.toggle("open");
+
+nav.classList.toggle("open");
+
 };
 
 document
 .querySelectorAll(".nav-links a")
 .forEach(link => {
 
-    link.onclick = () => {
-        nav.classList.remove("open");
-    };
+link.onclick = () => {
+
+nav.classList.remove("open");
+
+};
 
 });
 
